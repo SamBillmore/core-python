@@ -23,5 +23,10 @@ user_1 = User("Person 1", "admin", 1)
 user_2 = User("Person 2", "employee", 2)
 user_3 = User("Person 3", "customer", 3)
 
-# This User should not be allowed
+# user_3.ALLOWED_ROLES = {"hacker", "customer", "admin", "employee"}  # This overwrites the existing values but only for user_3
+# # This User should not be allowed
+# user_4 = User("Person 4", "hacker", 4)
+
+user_3.ALLOWED_ROLES.add("hacker")  # This adds hacker to the existing set (which is the class attribute, unless an instance attribute has been created with the same name)
+# This User should now be allowed
 user_4 = User("Person 4", "hacker", 4)

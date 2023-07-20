@@ -46,7 +46,7 @@ from user import User
 
 
 user = User("First Duplicate User", "employee", 123)
-user = User("Second Duplicate User", "employee", 123)
+user = User("Second Duplicate User", "employee")
 
 if hasattr(User, 'all_user_ids'):
     # This line will only run if the User class has all_user_ids defined
